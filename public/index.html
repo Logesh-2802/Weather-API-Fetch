@@ -3,11 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../src/css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i>ABC Weather</h1>
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </header>
+        
+        <div class="weather-content">
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Loading...</p>
+            </div>
+            
+            <div id="error" class="error hidden">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Error message will appear here</p>
+            </div>
+            
+            <div id="weather-data">
+                <div class="current-weather">
+                    <h2 class="location">New York, US</h2>
+                    <p class="date">Monday, June 12, 2023</p>
+                    <div class="weather-desc">
+                        <i class="fas fa-sun weather-icon"></i>
+                        <span class="description">Sunny</span>
+                    </div>
+                    <h3 class="temp">25°C</h3>
+                </div>
+                
+                <h3>5-Day Forecast</h3>
+                <div class="forecast">
+                    <!-- Forecast items will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../src/js/main.js"></script>
 </body>
 </html>
