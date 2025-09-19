@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '94a1743a260e85010baefb66bf44312'; // Replace with your OpenWeatherMap API key
+    const apiKey = '94a1743a260e85010baefb66bf443152'; // Replace with your OpenWeatherMap API key
     const cityInput = document.getElementById('city-input');
     const searchBtn = document.getElementById('search-btn');
     const weatherData = document.getElementById('weather-data');
@@ -57,6 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const forecastData = await forecastResponse.json();
+
+            // Log API data to console
+            console.log('Current Weather Data:', currentWeatherData);
+            console.log('Forecast Data:', forecastData);
 
             displayWeatherData(currentWeatherData, forecastData);
         } catch (err) {
@@ -178,3 +182,5 @@ document.addEventListener('DOMContentLoaded', () => {
         weatherData.classList.add('hidden');
     }
 });
+
+console.log(getWeatherData);
